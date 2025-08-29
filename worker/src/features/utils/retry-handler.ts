@@ -49,6 +49,8 @@ export async function handleRetryableError(
   },
   config: RetryConfig,
 ): Promise<boolean> {
+  logger.error(`Error while handling retryable error: ${error}`);
+
   // Only handle specific retryable errors
   if (
     !(error instanceof ApiError) ||
