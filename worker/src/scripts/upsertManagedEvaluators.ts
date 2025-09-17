@@ -12,7 +12,7 @@ const ManagedEvaluatorSchema = z.object({
   partner: z.string().nullish(),
   version: z.number(),
   outputSchema: z.object({
-    score: z.string(),
+    score: z.number(),
     reasoning: z.string(),
   }),
   prompt: z.string(),
